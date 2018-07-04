@@ -13,7 +13,7 @@
     <button class="weui-btn weui-btn_primary" id="redirectTo">redirectTo</button>
     <button class="weui-btn weui-btn_primary" id="postMessage">postMessage</button>
     <button class="weui-btn weui-btn_primary" id="getEnv">getEnv</button>
-    <button class="weui-btn weui-btn_primary" id="share">·ÖÏí</button>
+    <button class="weui-btn weui-btn_primary" id="share">分享</button>
     <input type="text" value="/page/component/pages/map/map" style="width: 100%;border: 1px solid gray;height: 44px;" />
     <br>
     <button class="weui-btn weui-btn_primary" id="logLocation">location.href</button>
@@ -27,7 +27,7 @@
     <br>
     <a href="https://www.baidu.com/">baidu</a>
     <br>
-    <button class="weui-btn weui-btn_primary" id="iframeRedirect">iframe Ìø×ª</button>
+    <button class="weui-btn weui-btn_primary" id="iframeRedirect">iframe 跳转</button>
     <iframe src="https://www.baidu.com"></iframe>
     <img style="width: 90%;" src="./chart.png">
     <div style="height: 1000px;"></div>
@@ -131,12 +131,13 @@
         location.hash = location.hash.replace('#', '') === 'a' ? 'b' : 'a'
       })
       document.getElementById('pushState').addEventListener('click', function() {
-        history.pushState(null, '', 'http://eternalsea.github.io/')
+        history.pushState(null, '', 'http://seasonhuang.github.io/')
       })
+
   document.querySelector('#chooseImage').onclick = function () {
     wx.chooseImage({
       success: function (res) {
-        alert('ÒÑÑ¡Ôñ ' + res.localIds.length + ' ÕÅÍ¼Æ¬');
+        alert('已选择 ' + res.localIds.length + ' 张图片');
         document.querySelector('#chooseImageResult').setAttribute('src', res.localIds[0])
       }
     });
